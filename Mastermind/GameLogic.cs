@@ -17,9 +17,10 @@ namespace Mastermind
             CPUPegs = Pegs;
         }
         // This sets the player's pegs, and return how much pegs are in the right place, and how much are just right color.
-        public void setPlayerPegsAndScore(int[] Pegs)
+        public int setPlayerPegsAndScore(int[] Pegs)
         {
             int[] ScorePegs = new int[4];
+            bool win = false;
 
             { // Get the score of the plaeyr, and set that to Score Pegs
                 int rightPlace = 0;
@@ -32,6 +33,8 @@ namespace Mastermind
                         rightPlace++;
                     
                 }
+                if (rightPlace == 4)
+                    win = true;
 
                 //Getting number of matching colors
                 for(int i=0; i<4; i++) 
@@ -64,13 +67,21 @@ namespace Mastermind
                     }
                 }
             }
-            for (int i = 0; i < 4; i++)
+
+            //Now, set the player pegs down, and move the counter if they fail. Otherwise if they win, return they won. 
+            if (win)
             {
-                Console.WriteLine(ScorePegs[i]);
+                return 1;
             }
-
-            Console.WriteLine("");
-
+            else
+            {
+                for(int i=0; i<4; i++)
+                {
+                    Board[Counter,i] = Pegs[i];
+                }
+                Counter++;
+                return 0;
+            }
         }
     }
 }

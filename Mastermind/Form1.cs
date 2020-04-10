@@ -22,10 +22,15 @@ namespace Mastermind
         {
             int[] temp = new int[4] { 0, 1, 2, 3 };
             gameLogic.setCPUPegs(temp);
+
             int[] temp1 = new int[4] { 1, 0, 2, 3 };
-            gameLogic.setPlayerPegsAndScore(temp1);
+            if (1==gameLogic.setPlayerPegsAndScore(temp))
+                Console.WriteLine("Player won. Clap clap");
+            if (0==gameLogic.setPlayerPegsAndScore(temp1))
+                Console.WriteLine("Player dind't won.");
             int[] temp2 = {4,5,1,2};
-            gameLogic.setPlayerPegsAndScore(temp2);
+            if (0==gameLogic.setPlayerPegsAndScore(temp2))
+                Console.WriteLine("OOF Player lost");
 
 
         }
