@@ -19,6 +19,8 @@ namespace Mastermind
         // This sets the player's pegs, and return how much pegs are in the right place, and how much are just right color.
         public int setPlayerPegsAndScore(int[] Pegs)
         {
+            if (Counter >= 1)  
+                return -1;
             int[] ScorePegs = new int[4];
             bool win = false;
 

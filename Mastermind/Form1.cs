@@ -31,7 +31,8 @@ namespace Mastermind
             int[] temp2 = {4,5,1,2};
             if (0==gameLogic.setPlayerPegsAndScore(temp2))
                 Console.WriteLine("OOF Player lost");
-
+            if (-1 == gameLogic.setPlayerPegsAndScore(temp1))
+                Console.WriteLine("What the fuck");
 
         }
     }
