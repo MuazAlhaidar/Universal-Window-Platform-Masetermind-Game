@@ -44,10 +44,32 @@ namespace Mastermind
                     
                 }
 
-                Console.WriteLine("JCOLE\t" + rightPlace + '\t' + rightColor);
-
-
+                //Right colors have to be mutally exlusive to rightPlace.
+                rightColor -= rightPlace;
+                for (int i = 0; i < 4; i++)
+                {
+                    if (rightColor != 0)
+                    {
+                        ScorePegs[i] = 1;
+                        rightColor--;
+                    }
+                    else if (rightPlace != 0)
+                    {
+                        ScorePegs[i] = 2;
+                        rightPlace--;
+                    }
+                    else
+                    {
+                        ScorePegs[i] = 0;
+                    }
+                }
             }
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(ScorePegs[i]);
+            }
+
+            Console.WriteLine("");
 
         }
     }

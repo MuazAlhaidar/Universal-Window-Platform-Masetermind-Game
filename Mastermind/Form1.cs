@@ -24,6 +24,8 @@ namespace Mastermind
             gameLogic.setCPUPegs(temp);
             int[] temp1 = new int[4] { 1, 0, 2, 3 };
             gameLogic.setPlayerPegsAndScore(temp1);
+            int[] temp2 = {4,5,1,2};
+            gameLogic.setPlayerPegsAndScore(temp2);
 
 
         }
