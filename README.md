@@ -1,1 +1,1 @@
-# Universal-Window-Platform-Masetermind-Game
+# Universal-Window-Platform-Mastermind-Game
