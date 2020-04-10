@@ -8,9 +8,22 @@ namespace Mastermind
 {
     class GameLogic
     {
-         int[,] Board=new int[10,4]; //Used to represnt the board
+        //Used to represnt the board
+         int[,] Board=new int[10, 4] {
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+                {0,0,0,0 },
+             } ;
          int Counter = 0; // Used to reprsent how many terms player can make decisiosns
          int[] CPUPegs = new int[4]; //CPU's code
+
         
         public GameLogic()
         {
@@ -45,7 +58,10 @@ namespace Mastermind
                     
                 }
                 if (rightPlace == 4)
+                {
                     win = true;
+                    return 1;
+                }
 
                 //Getting number of matching colors
                 for(int i=0; i<4; i++) 
@@ -80,20 +96,22 @@ namespace Mastermind
             }
 
             {   //Now, set the player pegs down, and move the counter if they fail. Otherwise if they win, return they won. 
-                if (win)
-                {
-                    return 1;
-                }
-                else
-                {
                     for (int i = 0; i < 4; i++)
                     {
                         Board[Counter, i] = Pegs[i];
                     }
                     Counter++;
                     return 0;
-                }
             }
+        }
+
+        // Player can switch pegs that are on the board, with what is in the field.
+        public void switchPegs(int boardPos, int playerPos, int[] PlayerPegs)
+        {
+            int temp = Board[Counter, boardPos];
+            Board[Counter, boardPos]=PlayerPegs[playerPos];
+            PlayerPegs[playerPos] = temp;
+
         }
     }
 }
