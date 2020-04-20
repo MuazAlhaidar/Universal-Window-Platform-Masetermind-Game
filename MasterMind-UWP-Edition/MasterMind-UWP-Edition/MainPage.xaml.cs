@@ -119,7 +119,6 @@ namespace MasterMind_UWP_Edition
             }
         }
 
-        // Lines are written out in the Output Tab When Debugging (so that linux users can debug)
         // Currently all buttons clicks do is print out to the Output (Debug Setting) window when they where pressed
         private void StartButton_Click(object sender, RoutedEventArgs e) {
 
