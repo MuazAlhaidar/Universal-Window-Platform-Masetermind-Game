@@ -27,10 +27,14 @@ namespace MasterMind_UWP_Edition
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //---------------------------- Constructor -------------------------------
+
         public MainPage()
         {
             this.InitializeComponent();
         }
+
+        //---------------------------- Win2D Stuffs ------------------------------
 
         private void Canvas_Draw(Microsoft.Graphics.Canvas.UI.Xaml.ICanvasAnimatedControl sender, Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedDrawEventArgs args) {
 
@@ -51,6 +55,8 @@ namespace MasterMind_UWP_Edition
 
 
         }
+
+        //---------------------------- Draw Elements -----------------------------
 
         private static void DrawGameTitle(CanvasAnimatedDrawEventArgs args) {
 
@@ -119,18 +125,25 @@ namespace MasterMind_UWP_Edition
             }
         }
 
+        //----------------------------- Button Clicks -----------------------------
         // Currently all buttons clicks do is print out to the Output (Debug Setting) window when they where pressed
         private void StartButton_Click(object sender, RoutedEventArgs e) {
+
+            this.Frame.Navigate(typeof(MastermindGamePage));
 
             Debug.WriteLine("(Start) Click Event");
         }
 
         private  void InstructionsButton_Click(object sender, RoutedEventArgs e) {
 
+            this.Frame.Navigate(typeof(InstructionsPage));
+
             Debug.WriteLine("(Instructions) Click Event");
         }
 
         private void CreditsButton_Click(object sender, RoutedEventArgs e) {
+
+            this.Frame.Navigate(typeof(CreditsPage));
 
             Debug.WriteLine("(Credits) Click Event");
         }
