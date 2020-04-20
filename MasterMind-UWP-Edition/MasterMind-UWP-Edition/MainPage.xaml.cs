@@ -126,7 +126,8 @@ namespace MasterMind_UWP_Edition
         }
 
         //----------------------------- Button Clicks -----------------------------
-        // Currently all buttons clicks do is print out to the Output (Debug Setting) window when they where pressed
+        // Buttons clicks print out to the Output (Debug Setting) window when they where pressed/
+        // Buttons also navigate to the appropriate page when clicked
         private void StartButton_Click(object sender, RoutedEventArgs e) {
 
             this.Frame.Navigate(typeof(MastermindGamePage));
