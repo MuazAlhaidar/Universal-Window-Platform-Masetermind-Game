@@ -11,5 +11,9 @@
 
     <Grid>
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" CreateResources="Canvas_Create_Resources"></canvas:CanvasAnimatedControl>
+        
+        <Button x:Name="StartButton" Content="" Margin="150,275,0,0" VerticalAlignment="Top" Width="200" Height="55" Opacity="0.3" Click="StartButton_Click"/>
+        <Button x:Name="InstructionsButton" Content="" Margin="150,375,0,0" VerticalAlignment="Top" Width="200" Height="55" Opacity="0.3" Click="InstructionsButton_Click"/>
+        <Button x:Name="CreditsButton" Content="" Margin="150,475,0,0" VerticalAlignment="Top" Width="200" Height="55" Opacity="0.3" Click="CreditsButton_Click"/>
     </Grid>
 </Page>
