@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace MasterMind_UWP_Edition {
 
-    public class Mastermind {
+    public class Peg {
 
-        
     }
 }

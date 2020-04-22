@@ -132,6 +132,7 @@
     <Compile Include="MastermindGamePage.xaml.cs">
       <DependentUpon>MastermindGamePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Peg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
