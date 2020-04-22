@@ -9,12 +9,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid FocusVisualPrimaryBrush="White">
+    <Grid FocusVisualPrimaryBrush="White" Margin="55,95,-385,-65">
 
-        <Button x:Name="StartButton" Content="" Margin="150,275,0,0" VerticalAlignment="Top" Width="200" Height="55" Opacity="0.3" Click="StartButton_Click"/>
-        <Button x:Name="InstructionsButton" Content="" Margin="150,375,0,0" VerticalAlignment="Top" Width="200" Height="55" Opacity="0.3" Click="InstructionsButton_Click"/>
-        <Button x:Name="CreditsButton" Content="" Margin="150,475,0,0" VerticalAlignment="Top" Width="200" Height="55" Opacity="0.3" Click="CreditsButton_Click"/>
-        <Grid Margin="520,108,464,75" RequestedTheme="Light" Opacity="0.5" Visibility="Visible" Background="{ThemeResource IMECandidateBackgroundThemeBrush}">
+        <Button x:Name="StartButton" Content="" Margin="130,55,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="StartButton_Click" Background="#339E1010" FocusVisualSecondaryBrush="#99CB0B0B"/>
+        <Button x:Name="InstructionsButton" Content="" Margin="130,155,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="InstructionsButton_Click" Background="#339E1010" FocusVisualSecondaryBrush="#99CB0B0B"/>
+        <Button x:Name="CreditsButton" Content="" Margin="130,255,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="CreditsButton_Click" Background="#339E1010" FocusVisualSecondaryBrush="#99CB0B0B"/>
+        <Grid Margin="520,108,1160,75" RequestedTheme="Light" Opacity="0.5" Visibility="Visible" Background="{ThemeResource IMECandidateBackgroundThemeBrush}">
 
             <Image x:Name="Decon_Blues00" HorizontalAlignment="Left" Height="050" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues01" HorizontalAlignment="Left" Height="050" Margin="140,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
@@ -35,7 +35,7 @@
             <Image x:Name="Decon_Blues31" HorizontalAlignment="Left" Height="050" Margin="140,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues32" HorizontalAlignment="Left" Height="050" Margin="263,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues33" HorizontalAlignment="Left" Height="050" Margin="10, 210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            
+
             <Image x:Name="Decon_Blues40" HorizontalAlignment="Left" Height="050" Margin="406,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues41" HorizontalAlignment="Left" Height="050" Margin="140,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues42" HorizontalAlignment="Left" Height="050" Margin="263,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
@@ -70,6 +70,38 @@
             <Image x:Name="Decon_Blues101" HorizontalAlignment="Left" Height="050" Margin="140,700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues102" HorizontalAlignment="Left" Height="050" Margin="263,700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues103" HorizontalAlignment="Left" Height="050" Margin="10, 700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
+        </Grid>
+        <Grid Margin="0,650,1370,0">
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Margin="270,650,1100,0">
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
+    </Grid>
+        <Grid Margin="400,650,970,0">
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Margin="135,650,1235,0">
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Page>
