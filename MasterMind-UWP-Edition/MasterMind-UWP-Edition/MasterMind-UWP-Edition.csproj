@@ -129,9 +129,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mastermind.cs" />
-    <Compile Include="MastermindGamePage.xaml.cs">
-      <DependentUpon>MastermindGamePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NewMainMenuPage.xaml.cs">
       <DependentUpon>NewMainMenuPage.xaml</DependentUpon>
     </Compile>
@@ -169,10 +166,6 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MastermindGamePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NewMainMenuPage.xaml">
       <SubType>Designer</SubType>

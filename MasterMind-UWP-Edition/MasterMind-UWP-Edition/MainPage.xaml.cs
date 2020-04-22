@@ -130,7 +130,7 @@ namespace MasterMind_UWP_Edition
         // Buttons also navigate to the appropriate page when clicked
         private void StartButton_Click(object sender, RoutedEventArgs e) {
 
-            this.Frame.Navigate(typeof(MastermindGamePage));
+            this.Frame.Navigate(typeof(MainPage));
 
             Debug.WriteLine("(Start) Click Event");
         }
