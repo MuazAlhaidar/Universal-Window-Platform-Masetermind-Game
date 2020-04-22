@@ -8,5 +8,6 @@ namespace MasterMind_UWP_Edition {
 
     public class Peg {
 
+
     }
 }
