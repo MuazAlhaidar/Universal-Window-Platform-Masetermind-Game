@@ -24,9 +24,15 @@ namespace MasterMind_UWP_Edition {
          int[] CPUPegs = new int[4]; //CPU's code
         int[] ScorePegs = new int[4]; //Score player has
 
-        
+
         public GameLogic()
         {
+            int[] temp = new int[4];
+            temp[0] = 0;
+            temp[1] = 1;
+            temp[2] = 2;
+            temp[3] = 3;
+            setCPUPegs(temp) ;
 
         }
         public void setCPUPegs(int[] Pegs)
@@ -34,7 +40,7 @@ namespace MasterMind_UWP_Edition {
             CPUPegs = Pegs;
         }
         // This sets the player's pegs, and return how much pegs are in the right place, and how much are just right color.
-        //Returns status code. -1 means "PLayer layign this game, cause he lost OOF"
+        //Returns status code. -1 means "PLayer should stop this game, cause he lost OOF"
         //0 is player has another shot, display score
         //1 means player won.
         public int setPlayerPegsAndScore(int[] Pegs)

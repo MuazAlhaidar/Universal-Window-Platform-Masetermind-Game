@@ -28,9 +28,11 @@ namespace MasterMind_UWP_Edition
     public sealed partial class MainPage : Page
     {
         //---------------------------- Constructor -------------------------------
+        static GameLogic gamelogic;
         public MainPage()
         {
             this.InitializeComponent();
+            gamelogic = new GameLogic();
         }
 
         //---------------------------- Win2D Stuffs ------------------------------
@@ -303,6 +305,10 @@ namespace MasterMind_UWP_Edition
                 }
                 //Colors should be setup now
             }
+            int score = -2;
+            score=gamelogic.setPlayerPegsAndScore(colors);
+            MessageDialog temp = new MessageDialog(score + " Score is that");
+            temp.ShowAsync();
 
         }
 
