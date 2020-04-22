@@ -148,5 +148,142 @@ namespace MasterMind_UWP_Edition
 
             Debug.WriteLine("(Credits) Click Event");
         }
+
+
+        private void Sumbit_Results(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
+
+
+
+
+        private void RadioButton_0_Checked_Blue(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_0_Checked_Red(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_0_Checked_Pink(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_0_Checked_Green(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_0_Checked_Orange(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_0_Checked_Purple(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        private void RadioButton_1_Checked_Blue(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_1_Checked_Red(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_1_Checked_Pink(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_1_Checked_Green(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_1_Checked_Orange(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_1_Checked_Purple(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void RadioButton_3_Checked_Blue(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_3_Checked_Red(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_3_Checked_Pink(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_3_Checked_Green(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_3_Checked_Orange(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_3_Checked_Purple(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void RadioButton_4_Checked_Blue(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_4_Checked_Red(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_4_Checked_Pink(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_4_Checked_Green(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_4_Checked_Orange(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_4_Checked_Purple(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
     }
 }

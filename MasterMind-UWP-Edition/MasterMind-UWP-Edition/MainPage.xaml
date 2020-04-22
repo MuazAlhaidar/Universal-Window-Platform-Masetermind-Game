@@ -6,14 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" Background="#FF441F1F">
 
     <Grid FocusVisualPrimaryBrush="White" Margin="55,95,-385,-65">
 
-        <Button x:Name="StartButton" Content="" Margin="130,55,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="StartButton_Click" Background="#339E1010" FocusVisualSecondaryBrush="#99CB0B0B"/>
-        <Button x:Name="InstructionsButton" Content="" Margin="130,155,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="InstructionsButton_Click" Background="#339E1010" FocusVisualSecondaryBrush="#99CB0B0B"/>
-        <Button x:Name="CreditsButton" Content="" Margin="130,255,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="CreditsButton_Click" Background="#339E1010" FocusVisualSecondaryBrush="#99CB0B0B"/>
+        <Button x:Name="StartButton" Content="Pizza" Margin="130,55,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="StartButton_Click" Background="#33FFFFFF" FocusVisualSecondaryBrush="#996C0000" FocusVisualPrimaryBrush="#FFBD2F2F"/>
+        <Button x:Name="InstructionsButton" Content="Ice Cream" Margin="130,155,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="InstructionsButton_Click" Background="#33FFFFFF" FocusVisualSecondaryBrush="#996C0000" FocusVisualPrimaryBrush="#FFBD2F2F"/>
+        <Button x:Name="CreditsButton" Content="Fruit Snake" Margin="130,255,0,0" VerticalAlignment="Top" Width="200" Height="55" Click="CreditsButton_Click" Background="#33FFFFFF" FocusVisualSecondaryBrush="#996C0000" FocusVisualPrimaryBrush="#FFBD2F2F"/>
         <Grid Margin="520,108,1160,75" RequestedTheme="Light" Opacity="0.5" Visibility="Visible" Background="{ThemeResource IMECandidateBackgroundThemeBrush}">
 
             <Image x:Name="Decon_Blues00" HorizontalAlignment="Left" Height="050" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
@@ -71,37 +70,54 @@
             <Image x:Name="Decon_Blues102" HorizontalAlignment="Left" Height="050" Margin="263,700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="Decon_Blues103" HorizontalAlignment="Left" Height="050" Margin="10, 700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
         </Grid>
-        <Grid Margin="0,650,1370,0">
-            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="-30,650,2115,0">
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"       Checked="RadioButton_0_Checked_Blue"  />
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"        Checked="RadioButton_0_Checked_Red"   />
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"       Checked="RadioButton_0_Checked_Pink"  />
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"    Checked="RadioButton_0_Checked_Purple"/>
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"     Checked="RadioButton_0_Checked_Green" />
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"    Checked="RadioButton_0_Checked_Orange"/>
         </Grid>
-        <Grid Margin="270,650,1100,0">
-            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
-    </Grid>
-        <Grid Margin="400,650,970,0">
-            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="195,650,1870,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="34*"/>
+            </Grid.RowDefinitions>
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"    Checked="RadioButton_1_Checked_Blue"    />
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"     Checked="RadioButton_1_Checked_Red"     />
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"    Checked="RadioButton_1_Checked_Pink"    />
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top" Checked="RadioButton_1_Checked_Purple"  />
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"  Checked="RadioButton_1_Checked_Green"   />
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top" Checked="RadioButton_1_Checked_Orange"  />
         </Grid>
-        <Grid Margin="135,650,1235,0">
-            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="315,650,1765,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="13*"/>
+                <RowDefinition/>
+                <RowDefinition Height="24*"/>
+            </Grid.RowDefinitions>
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"               Checked="RadioButton_4_Checked_Blue"                        />
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"                Checked="RadioButton_4_Checked_Red"                        />
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"               Checked="RadioButton_4_Checked_Pink"                        />
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"            Checked="RadioButton_4_Checked_Purple"                         />
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"             Checked="RadioButton_4_Checked_Green"                         />
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"            Checked="RadioButton_4_Checked_Orange"                         />
         </Grid>
+        <Grid Margin="90,650,1987,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="33*"/>
+            </Grid.RowDefinitions>
+            <RadioButton Content="Blue" Margin="2,10,0,0" VerticalAlignment="Top"                                 Checked="RadioButton_3_Checked_Blue"            />
+            <RadioButton Content="Red" Margin="2,40,0,0" VerticalAlignment="Top"                                  Checked="RadioButton_3_Checked_Red"            />
+            <RadioButton Content="Pink" Margin="2,70,0,0" VerticalAlignment="Top"                                 Checked="RadioButton_3_Checked_Pink"            />
+            <RadioButton Content="Purple" Margin="2,100,0,0" VerticalAlignment="Top"                              Checked="RadioButton_3_Checked_Purple"             />
+            <RadioButton Content="Green" Margin="2,130,0,0" VerticalAlignment="Top"                               Checked="RadioButton_3_Checked_Green"             />
+            <RadioButton Content="Orange" Margin="2,155,0,0" VerticalAlignment="Top"                              Checked="RadioButton_3_Checked_Orange"             />
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="1095,831,0,0" Text="BACK TO BACK TO BACK TO BACK" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Press X to not Die" Margin="1415,695,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />
     </Grid>
 </Page>
