@@ -176,25 +176,32 @@ namespace MasterMind_UWP_Edition
             Board = gamelogic.Board;
             int counter = gamelogic.Counter;
 
+            Board[0,0] = 1;
+            Board[0,1] = 2;
+            Board[0,2] = 3;
+            Board[0,3] = 4;
+            Board[1,0] = 5;
+
+
             var temp = Peg.Children;
             var Array = temp.ToArray();
             for(int i=0; i<10; i++)
             {
                 for(int j=0; j<4; j++)
                 {
+                    Array[4*i+j].SetValue(TextBlock.TextProperty, "Pizza");
                     switch (Board[i, j])
                     {
                         // NO color
-                        //case -1: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+                        case -1: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
 
                         //Color
-                        //case 0: Array[4 * i + j]  break;
-                        case 1: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
-                        case 2: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
-                        case 3: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
-                        case 4: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
-                        case 5: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
-
+                        case 0: Array[4 * i + j].SetValue(TextBlock.TextProperty, "Red"); break;
+                        case 1: Array[4 * i + j].SetValue(TextBlock.TextProperty, "Blue"); break;
+                        case 2: Array[4 * i + j].SetValue(TextBlock.TextProperty, "Green"); break;
+                        case 3: Array[4 * i + j].SetValue(TextBlock.TextProperty, "Yellow"); break;
+                        case 4: Array[4 * i + j].SetValue(TextBlock.TextProperty, "Purple"); break;
+                        case 5: Array[4 * i + j].SetValue(TextBlock.TextProperty, "Cyan"); break;
                     }
 
                 }

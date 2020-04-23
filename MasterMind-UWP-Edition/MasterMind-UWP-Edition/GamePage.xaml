@@ -9,58 +9,6 @@
     mc:Ignorable="d" Background="#FF441F1F">
 
     <Grid FocusVisualPrimaryBrush="White" Margin="55,95,-385,-65">
-        <Grid x:Name="Peg" Margin="520,108,1160,75" RequestedTheme="Light" Opacity="0.5" Visibility="Visible" Background="{ThemeResource IMECandidateBackgroundThemeBrush}">
-
-            <Image x:Name="P00" HorizontalAlignment="Left" Height="050" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png" Visibility="Visible" FocusVisualPrimaryBrush="Red"/>
-            <Image x:Name="P01" HorizontalAlignment="Left" Height="050" Margin="140,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P02" HorizontalAlignment="Left" Height="050" Margin="263,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P03" HorizontalAlignment="Left" Height="050" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P10" HorizontalAlignment="Left" Height="050" Margin="406,070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P11" HorizontalAlignment="Left" Height="050" Margin="140,070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P12" HorizontalAlignment="Left" Height="050" Margin="263,070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P13" HorizontalAlignment="Left" Height="050" Margin="10, 070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P20" HorizontalAlignment="Left" Height="050" Margin="406,140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P21" HorizontalAlignment="Left" Height="050" Margin="140,140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P22" HorizontalAlignment="Left" Height="050" Margin="263,140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P23" HorizontalAlignment="Left" Height="050" Margin="10, 140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P30" HorizontalAlignment="Left" Height="050" Margin="406,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P31" HorizontalAlignment="Left" Height="050" Margin="140,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P32" HorizontalAlignment="Left" Height="050" Margin="263,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P33" HorizontalAlignment="Left" Height="050" Margin="10, 210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P40" HorizontalAlignment="Left" Height="050" Margin="406,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P41" HorizontalAlignment="Left" Height="050" Margin="140,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P42" HorizontalAlignment="Left" Height="050" Margin="263,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P43" HorizontalAlignment="Left" Height="050" Margin="10, 280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P50" HorizontalAlignment="Left" Height="050" Margin="406,350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P51" HorizontalAlignment="Left" Height="050" Margin="140,350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P52" HorizontalAlignment="Left" Height="050" Margin="263,350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P53" HorizontalAlignment="Left" Height="050" Margin="10, 350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P60" HorizontalAlignment="Left" Height="050" Margin="406,420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P61" HorizontalAlignment="Left" Height="050" Margin="140,420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P62" HorizontalAlignment="Left" Height="050" Margin="263,420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P63" HorizontalAlignment="Left" Height="050" Margin="10, 420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P70" HorizontalAlignment="Left" Height="050" Margin="406,490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P71" HorizontalAlignment="Left" Height="050" Margin="140,490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P72" HorizontalAlignment="Left" Height="050" Margin="263,490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P73" HorizontalAlignment="Left" Height="050" Margin="10, 490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P80" HorizontalAlignment="Left" Height="050" Margin="406,560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P81" HorizontalAlignment="Left" Height="050" Margin="140,560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P82" HorizontalAlignment="Left" Height="050" Margin="263,560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P83" HorizontalAlignment="Left" Height="050" Margin="10, 560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P90" HorizontalAlignment="Left" Height="050" Margin="406,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P91" HorizontalAlignment="Left" Height="050" Margin="140,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P92" HorizontalAlignment="Left" Height="050" Margin="263,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P93" HorizontalAlignment="Left" Height="050" Margin="10, 630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-        </Grid>
         <TextBlock HorizontalAlignment="Left" Margin="1095,831,0,0" Text="BACK TO BACK TO BACK TO BACK" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Press X to not Die" Margin="1405,738,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />
         <ComboBox x:Name="Select3"  Margin="355,753,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_2">
@@ -95,5 +43,47 @@
             <ComboBoxItem Content="Purple"/>
             <ComboBoxItem Content="Cyan"/>
         </ComboBox>
+        <Grid x:Name="Peg" Margin="570,230,1105,200" Background="White">
+            <TextBlock  HorizontalAlignment="Left" Margin="32,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,206,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,206,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,206,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,206,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,253,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,253,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,253,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,253,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,306,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,306,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,306,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,306,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,348,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,348,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,348,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,348,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,401,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,401,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,401,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,401,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,447,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,447,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,447,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,447,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="32,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="155,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="287,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="412,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+        </Grid>
     </Grid>
 </Page>
