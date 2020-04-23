@@ -31,11 +31,14 @@ namespace MasterMind_UWP_Edition {
 
         private void Canvas_Click(CoreWindow sender, PointerEventArgs args) {
 
-            for (int column = 0; column < mastermind.Pegs[mastermind.CurrentRow].Count; column++) {
+            if (mastermind.CurrentRow < 10) {
 
-                if(mastermind.Pegs[mastermind.CurrentRow][column].IsClickWithinBounds(args.CurrentPoint.Position.X, args.CurrentPoint.Position.Y)) {
+                for (int column = 0; column < mastermind.Pegs[mastermind.CurrentRow].Count; column++) {
 
-                    mastermind.Pegs[mastermind.CurrentRow][column].Color = mastermind.NextColor(mastermind.Pegs[mastermind.CurrentRow][column].Color);
+                    if (mastermind.Pegs[mastermind.CurrentRow][column].IsClickWithinBounds(args.CurrentPoint.Position.X, args.CurrentPoint.Position.Y)) {
+
+                        mastermind.Pegs[mastermind.CurrentRow][column].Color = mastermind.NextColor(mastermind.Pegs[mastermind.CurrentRow][column].Color);
+                    }
                 }
             }
         }
@@ -95,7 +98,12 @@ namespace MasterMind_UWP_Edition {
 
         private void CheckButton_Click(object sender, RoutedEventArgs e) {
 
-            mastermind.CheckIfCorrect();
+            if (mastermind.CurrentRow < 10) {
+
+                mastermind.CurrentRow++;
+
+                mastermind.CheckIfCorrect();
+            }
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e) {
