@@ -8,7 +8,7 @@ namespace MasterMind_UWP_Edition {
     class GameLogic
     {
         //Used to represnt the board
-         int[,] Board=new int[10, 4] {
+         public int[,] Board=new int[10, 4] {
                     {0,0,0,0 },
                     {0,0,0,0 },
                     {0,0,0,0 },
@@ -20,7 +20,7 @@ namespace MasterMind_UWP_Edition {
                     {0,0,0,0 },
                     {0,0,0,0 },
              } ;
-         int Counter = 0; // Used to reprsent how many terms player can make decisiosns
+         public int Counter = 0; // Used to reprsent how many terms player can make decisiosns
          int[] CPUPegs = new int[4]; //CPU's code
         int[] ScorePegs = new int[4]; //Score player has
 

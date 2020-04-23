@@ -33,6 +33,8 @@ namespace MasterMind_UWP_Edition
         {
             this.InitializeComponent();
             gamelogic = new GameLogic();
+            changeBox();
+
         }
 
         //---------------------------- Win2D Stuffs ------------------------------
@@ -168,6 +170,19 @@ namespace MasterMind_UWP_Edition
             Debug.WriteLine("(Credits) Click Event");
         }
 
+        private void changeBox()
+        {
+            int[,] Board = new int[10, 4];
+            Board = gamelogic.Board;
+            int counter = gamelogic.Counter;
+
+            var temp = Peg.Children;
+            var Array = temp.ToArray();
+            //To set values in the peg grid, we will convert it to a 1 diemnsioanl array.
+            //Remember that Array is 44 values, and Board is [10x4] values, so just do forloop nesting to get the correct one.
+            //Array[0].Visibility = Visibility.Collapsed;
+
+        }
 
         private void Sumbit_Results(object sender, RoutedEventArgs e)
         {
@@ -306,7 +321,7 @@ namespace MasterMind_UWP_Edition
                 //Colors should be setup now
             }
             int score = -2;
-            score=gamelogic.setPlayerPegsAndScore(colors);
+            score = gamelogic.setPlayerPegsAndScore(colors);
             MessageDialog temp = new MessageDialog(score + " Score is that");
             temp.ShowAsync();
 
