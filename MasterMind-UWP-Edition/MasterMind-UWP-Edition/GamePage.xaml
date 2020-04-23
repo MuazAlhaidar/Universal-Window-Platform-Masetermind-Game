@@ -11,7 +11,7 @@
     <Grid FocusVisualPrimaryBrush="White" Margin="55,95,-385,-65">
         <Grid x:Name="Peg" Margin="520,108,1160,75" RequestedTheme="Light" Opacity="0.5" Visibility="Visible" Background="{ThemeResource IMECandidateBackgroundThemeBrush}">
 
-            <Image x:Name="P00" HorizontalAlignment="Left" Height="050" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png" Visibility="Visible"/>
+            <Image x:Name="P00" HorizontalAlignment="Left" Height="050" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png" Visibility="Visible" FocusVisualPrimaryBrush="Red"/>
             <Image x:Name="P01" HorizontalAlignment="Left" Height="050" Margin="140,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="P02" HorizontalAlignment="Left" Height="050" Margin="263,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="P03" HorizontalAlignment="Left" Height="050" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
@@ -60,11 +60,6 @@
             <Image x:Name="P91" HorizontalAlignment="Left" Height="050" Margin="140,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="P92" HorizontalAlignment="Left" Height="050" Margin="263,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
             <Image x:Name="P93" HorizontalAlignment="Left" Height="050" Margin="10, 630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P100" HorizontalAlignment="Left" Height="050" Margin="406,700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P101" HorizontalAlignment="Left" Height="050" Margin="140,700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P102" HorizontalAlignment="Left" Height="050" Margin="263,700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P103" HorizontalAlignment="Left" Height="050" Margin="10, 700,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
         </Grid>
         <TextBlock HorizontalAlignment="Left" Margin="1095,831,0,0" Text="BACK TO BACK TO BACK TO BACK" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Press X to not Die" Margin="1405,738,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />

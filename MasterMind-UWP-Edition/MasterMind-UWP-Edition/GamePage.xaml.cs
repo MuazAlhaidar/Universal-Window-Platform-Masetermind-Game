@@ -178,9 +178,27 @@ namespace MasterMind_UWP_Edition
 
             var temp = Peg.Children;
             var Array = temp.ToArray();
-            //To set values in the peg grid, we will convert it to a 1 diemnsioanl array.
-            //Remember that Array is 44 values, and Board is [10x4] values, so just do forloop nesting to get the correct one.
-            //Array[0].Visibility = Visibility.Collapsed;
+            for(int i=0; i<10; i++)
+            {
+                for(int j=0; j<4; j++)
+                {
+                    switch (Board[i, j])
+                    {
+                        // NO color
+                        //case -1: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+
+                        //Color
+                        //case 0: Array[4 * i + j]  break;
+                        case 1: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+                        case 2: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+                        case 3: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+                        case 4: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+                        case 5: Array[4 * i + j].Visibility = Visibility.Collapsed; break;
+
+                    }
+
+                }
+            }
 
         }
 

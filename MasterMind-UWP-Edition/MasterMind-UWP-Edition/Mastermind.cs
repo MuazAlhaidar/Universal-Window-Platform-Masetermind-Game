@@ -9,16 +9,16 @@ namespace MasterMind_UWP_Edition {
     {
         //Used to represnt the board
          public int[,] Board=new int[10, 4] {
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
-                    {0,0,0,0 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
+                    {-1,-1,-1,-1 },
              } ;
          public int Counter = 0; // Used to reprsent how many terms player can make decisiosns
          int[] CPUPegs = new int[4]; //CPU's code
