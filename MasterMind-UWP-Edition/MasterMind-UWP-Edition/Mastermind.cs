@@ -16,7 +16,7 @@ namespace MasterMind_UWP_Edition {
         public int CurrentRow { get; set; }
 
         public List<Color> PegColors = new List<Color> {Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.Purple, Colors.Cyan};
-        public List<Color> HintColors = new List<Color> { Colors.Green, Colors.Yellow, Colors.Transparent };
+        public List<Color> HintColors = new List<Color> { Colors.Green, Colors.Yellow, Colors.SlateGray };
 
         public List<List<Peg>> Pegs;
         public List<List<Peg>> HintPegs;
