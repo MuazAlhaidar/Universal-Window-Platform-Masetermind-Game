@@ -9,60 +9,8 @@
     mc:Ignorable="d" Background="#FF441F1F">
 
     <Grid FocusVisualPrimaryBrush="White" Margin="10,10,10,10">
-        <Grid x:Name="Peg" Margin="46,26,1360,259" RequestedTheme="Light" Opacity="0.5" Visibility="Visible" Background="{ThemeResource IMECandidateBackgroundThemeBrush}">
-
-            <Image x:Name="P00" HorizontalAlignment="Left" Height="050" Margin="406,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png" Visibility="Visible" FocusVisualPrimaryBrush="Red"/>
-            <Image x:Name="P01" HorizontalAlignment="Left" Height="050" Margin="140,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P02" HorizontalAlignment="Left" Height="050" Margin="263,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P03" HorizontalAlignment="Left" Height="050" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P10" HorizontalAlignment="Left" Height="050" Margin="406,070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P11" HorizontalAlignment="Left" Height="050" Margin="140,070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P12" HorizontalAlignment="Left" Height="050" Margin="263,070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P13" HorizontalAlignment="Left" Height="050" Margin="10, 070,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P20" HorizontalAlignment="Left" Height="050" Margin="406,140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P21" HorizontalAlignment="Left" Height="050" Margin="140,140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P22" HorizontalAlignment="Left" Height="050" Margin="263,140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P23" HorizontalAlignment="Left" Height="050" Margin="10, 140,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P30" HorizontalAlignment="Left" Height="050" Margin="406,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P31" HorizontalAlignment="Left" Height="050" Margin="140,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P32" HorizontalAlignment="Left" Height="050" Margin="263,210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P33" HorizontalAlignment="Left" Height="050" Margin="10, 210,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P40" HorizontalAlignment="Left" Height="050" Margin="406,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P41" HorizontalAlignment="Left" Height="050" Margin="140,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P42" HorizontalAlignment="Left" Height="050" Margin="263,280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P43" HorizontalAlignment="Left" Height="050" Margin="10, 280,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P50" HorizontalAlignment="Left" Height="050" Margin="406,350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P51" HorizontalAlignment="Left" Height="050" Margin="140,350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P52" HorizontalAlignment="Left" Height="050" Margin="263,350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P53" HorizontalAlignment="Left" Height="050" Margin="10, 350,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P60" HorizontalAlignment="Left" Height="050" Margin="406,420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P61" HorizontalAlignment="Left" Height="050" Margin="140,420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P62" HorizontalAlignment="Left" Height="050" Margin="263,420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P63" HorizontalAlignment="Left" Height="050" Margin="10, 420,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P70" HorizontalAlignment="Left" Height="050" Margin="406,490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P71" HorizontalAlignment="Left" Height="050" Margin="140,490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P72" HorizontalAlignment="Left" Height="050" Margin="263,490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P73" HorizontalAlignment="Left" Height="050" Margin="10, 490,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P80" HorizontalAlignment="Left" Height="050" Margin="406,560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P81" HorizontalAlignment="Left" Height="050" Margin="140,560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P82" HorizontalAlignment="Left" Height="050" Margin="263,560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P83" HorizontalAlignment="Left" Height="050" Margin="10, 560,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-
-            <Image x:Name="P90" HorizontalAlignment="Left" Height="050" Margin="406,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P91" HorizontalAlignment="Left" Height="050" Margin="140,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P92" HorizontalAlignment="Left" Height="050" Margin="263,630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-            <Image x:Name="P93" HorizontalAlignment="Left" Height="050" Margin="10, 630,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/StoreLogo.png"/>
-        </Grid>
-        <Button Content="Press X to not Die" Margin="600,269,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />
-        <ComboBox x:Name="Select3"  Margin="600,134,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_2">
+        <Button Content="Press X to not Die" Margin="1260,801,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />
+        <ComboBox x:Name="Select3"  Margin="210,741,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_2">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Green"/>
@@ -70,7 +18,7 @@
             <ComboBoxItem Content="Purple"/>
             <ComboBoxItem Content="Cyan"/>
         </ComboBox>
-        <ComboBox  x:Name="Select4"  Margin="600,190,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_3">
+        <ComboBox  x:Name="Select4"  Margin="210,797,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_3">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Green"/>
@@ -78,7 +26,7 @@
             <ComboBoxItem Content="Purple"/>
             <ComboBoxItem Content="Cyan"/>
         </ComboBox>
-        <ComboBox  x:Name="Select2"   Margin="600,81,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_1">
+        <ComboBox  x:Name="Select2"   Margin="210,688,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_1">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Green"/>
@@ -86,7 +34,7 @@
             <ComboBoxItem Content="Purple"/>
             <ComboBoxItem Content="Cyan"/>
         </ComboBox>
-        <ComboBox  x:Name="Select1"   Margin="600,26,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_1">
+        <ComboBox  x:Name="Select1"   Margin="210,633,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_1">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Green"/>
@@ -94,7 +42,7 @@
             <ComboBoxItem Content="Purple"/>
             <ComboBoxItem Content="Cyan"/>
         </ComboBox>
-        <Grid x:Name="Peg" Margin="570,230,1105,200" Background="White">
+        <Grid x:Name="Peg" Margin="570,230,715,200" Background="White">
             <TextBlock  HorizontalAlignment="Left" Margin="32,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="155,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="287,58,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
@@ -135,6 +83,18 @@
             <TextBlock  HorizontalAlignment="Left" Margin="155,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="287,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="412,500,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
+        </Grid>
+        <Grid x:Name="Score" Margin="340,230,1330,200">
+            <TextBlock HorizontalAlignment="Center" Margin="0,61,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,110,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,156,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,206,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,346,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.672,11.316"/>
+            <TextBlock HorizontalAlignment="Center" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,256,0,0" RenderTransformOrigin="0.345,0.211"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,401,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.672,11.316"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,450,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.672,11.316"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,501,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.672,11.316"/>
         </Grid>
     </Grid>
 </Page>

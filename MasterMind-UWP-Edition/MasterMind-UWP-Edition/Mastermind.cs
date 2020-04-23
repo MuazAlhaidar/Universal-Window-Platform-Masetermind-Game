@@ -22,7 +22,7 @@ namespace MasterMind_UWP_Edition {
              } ;
          public int Counter = 0; // Used to reprsent how many terms player can make decisiosns
          int[] CPUPegs = new int[4]; //CPU's code
-        int[] ScorePegs = new int[4]; //Score player has
+        public int[] ScorePegs = new int[4]; //Score player has
 
 
         public GameLogic()
@@ -46,7 +46,7 @@ namespace MasterMind_UWP_Edition {
         public int setPlayerPegsAndScore(int[] Pegs)
         {
             { //Check to see if player should stop playing
-                if (Counter >= 1)
+                if (Counter >= 10)
                     return -1;
             }
 
@@ -65,6 +65,13 @@ namespace MasterMind_UWP_Edition {
                 if (rightPlace == 4)
                 {
                     win = true;
+                    for(int i=0; i<10; i++)
+                    {
+                        for(int j=0; j<4; j++)
+                        {
+                            Board[i, j] = 10; // THe value to show that this is the winning result
+                        }
+                    }
                     return 1;
                 }
 
