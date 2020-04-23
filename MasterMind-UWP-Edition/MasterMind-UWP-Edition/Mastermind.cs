@@ -65,12 +65,10 @@ namespace MasterMind_UWP_Edition {
                 if (rightPlace == 4)
                 {
                     win = true;
-                    for(int i=0; i<10; i++)
+                    for(int i=0; i<4; i++)
                     {
-                        for(int j=0; j<4; j++)
-                        {
-                            Board[i, j] = 10; // THe value to show that this is the winning result
-                        }
+                        Board[Counter, i] = Pegs[i]; // THe value to show that this is the winning result
+                        ScorePegs[i] = 2; 
                     }
                     return 1;
                 }

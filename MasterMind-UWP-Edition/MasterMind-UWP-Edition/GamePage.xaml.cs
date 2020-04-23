@@ -34,7 +34,10 @@ namespace MasterMind_UWP_Edition
             this.InitializeComponent();
             gamelogic = new GameLogic();
             changeBox();
-            displayRight();
+            for(int i=0; i<10; i++)
+            {
+                Score.Children[i].Visibility = Visibility.Collapsed;
+            }
 
         }
 
@@ -352,21 +355,24 @@ namespace MasterMind_UWP_Edition
             int[] ScorePegs = gamelogic.ScorePegs;
             int Counter = gamelogic.Counter;
             var Array = Score.Children.ToArray();
-            for(int i=0; i<10; i++)
             {
-                if (i >= Counter)
+                Array[Counter].Visibility = Visibility.Visible;
+                int Black = 0;
+                int White = 0;
+                for (int j = 0; j < 4; j++)
                 {
-                    Debug.WriteLine("Collpase");
-                    Array[i].Visibility = Visibility.Collapsed;
+                    if (ScorePegs[j] == 1)
+                        Black++;
+                    else if (ScorePegs[j] == 2)
+                        White++;
                 }
-                else
-                {
-                    Debug.WriteLine("Visible");
-                    Array[i].Visibility = Visibility.Visible;
 
-                }
+                string temp = "Black " + Black + "\t White" + White;
+
+                Array[Counter].SetValue(TextBlock.TextProperty, temp);
+
             }
-            
+
 
         }
 
