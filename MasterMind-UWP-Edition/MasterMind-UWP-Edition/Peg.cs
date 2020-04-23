@@ -13,6 +13,8 @@ namespace MasterMind_UWP_Edition {
 
     public class Peg {
 
+        public CanvasBitmap pegImage;
+
         public float X { get; set; }
         public float Y { get; set; }
         public float Radius { get; set; }
@@ -37,8 +39,14 @@ namespace MasterMind_UWP_Edition {
         }
 
         public void Draw(CanvasDrawingSession drawingSession) {
-
+            //if (pegImage != null) {
+            //    drawingSession.DrawImage
+            //}
             drawingSession.FillCircle(X, Y, Radius, Color);
+        }
+
+        public void UpdatePeg(CanvasDrawingSession drawingSession) {
+
         }
     }
 }

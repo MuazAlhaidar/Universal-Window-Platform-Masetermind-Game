@@ -33,7 +33,10 @@ namespace MasterMind_UWP_Edition {
 
             for (int column = 0; column < mastermind.Pegs[mastermind.CurrentRow].Count; column++) {
 
-                mastermind.Pegs[mastermind.CurrentRow][column].IsClickWithinBounds(args.CurrentPoint.Position.X, args.CurrentPoint.Position.Y);
+                if(mastermind.Pegs[mastermind.CurrentRow][column].IsClickWithinBounds(args.CurrentPoint.Position.X, args.CurrentPoint.Position.Y)) {
+
+                    mastermind.Pegs[mastermind.CurrentRow][column].Color = mastermind.NextColor(mastermind.CurrentRow, column, mastermind.Pegs[mastermind.CurrentRow][column].Color);
+                }
             }
         }
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Context;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI;
@@ -14,7 +15,7 @@ namespace MasterMind_UWP_Edition {
 
         public int CurrentRow { get; set; }
 
-        public List<Color> PegColors = new List<Color> {Colors.Red, Colors.Green, Colors.Blue, Colors.Yellow, Colors.Purple, Colors.Cyan};
+        public List<Color> PegColors = new List<Color> {Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.Purple, Colors.Cyan};
         public List<Color> HintColors = new List<Color> { Colors.Green, Colors.Yellow, Colors.Transparent };
 
         public List<List<Peg>> Pegs;
@@ -55,6 +56,45 @@ namespace MasterMind_UWP_Edition {
                 YCoordinate += 50;
                 Pegs.Add(row);
             }
+        }
+
+        public Color NextColor(int rowIndex, int columnIndex, Color currentColor) {
+
+            if (currentColor == Colors.SlateGray) {
+
+                return PegColors[0];
+            }
+            else if (currentColor == Colors.Red) {
+
+                return PegColors[1];
+            }
+            else if (currentColor == Colors.Blue) {
+
+                return PegColors[2];
+            }
+            else if (currentColor == Colors.Green) {
+
+                return PegColors[3];
+            }
+            else if (currentColor == Colors.Yellow) {
+
+                return PegColors[4];
+            }
+            else if (currentColor == Colors.Purple) {
+
+                return PegColors[5];
+            }
+            else if (currentColor == Colors.Cyan) {
+
+                return PegColors[0];
+            }
+
+            return default;
+        }
+
+        public void Update() {
+
+
         }
 
         public void DrawMastermind(CanvasDrawingSession drawingSession) {
