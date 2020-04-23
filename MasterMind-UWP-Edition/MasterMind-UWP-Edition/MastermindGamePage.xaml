@@ -10,5 +10,7 @@
 
     <Grid>
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" CreateResources="Canvas_Create_Resources"></canvas:CanvasAnimatedControl>
+        <Button x:Name="CheckButton" Content="" Margin="300,575,0,0" Height="55" Width="200" VerticalAlignment="Top" Opacity=".3" Click="CheckButton_Click"/>
+        <Button x:Name="ReturnButton" Content="" Margin="300,635,0,0" Height="55" Width="200" VerticalAlignment="Top" Opacity=".3" Click="ReturnButton_Click"/>
     </Grid>
 </Page>
