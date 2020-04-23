@@ -58,7 +58,7 @@ namespace MasterMind_UWP_Edition {
             }
         }
 
-        public Color NextColor(int rowIndex, int columnIndex, Color currentColor) {
+        public Color NextColor(Color currentColor) {
 
             if (currentColor == Colors.SlateGray) {
 

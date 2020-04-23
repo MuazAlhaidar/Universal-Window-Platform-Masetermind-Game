@@ -35,7 +35,7 @@ namespace MasterMind_UWP_Edition {
 
                 if(mastermind.Pegs[mastermind.CurrentRow][column].IsClickWithinBounds(args.CurrentPoint.Position.X, args.CurrentPoint.Position.Y)) {
 
-                    mastermind.Pegs[mastermind.CurrentRow][column].Color = mastermind.NextColor(mastermind.CurrentRow, column, mastermind.Pegs[mastermind.CurrentRow][column].Color);
+                    mastermind.Pegs[mastermind.CurrentRow][column].Color = mastermind.NextColor(mastermind.Pegs[mastermind.CurrentRow][column].Color);
                 }
             }
         }

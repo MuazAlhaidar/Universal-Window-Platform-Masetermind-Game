@@ -39,9 +39,7 @@ namespace MasterMind_UWP_Edition {
         }
 
         public void Draw(CanvasDrawingSession drawingSession) {
-            //if (pegImage != null) {
-            //    drawingSession.DrawImage
-            //}
+            
             drawingSession.FillCircle(X, Y, Radius, Color);
         }
 
