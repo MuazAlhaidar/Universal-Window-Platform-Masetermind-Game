@@ -92,11 +92,6 @@ namespace MasterMind_UWP_Edition {
             return default;
         }
 
-        public void Update() {
-
-
-        }
-
         public void DrawMastermind(CanvasDrawingSession drawingSession) {
 
             for (int rowIndex = 0; rowIndex < Pegs.Count; rowIndex++) {

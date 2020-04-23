@@ -42,9 +42,5 @@ namespace MasterMind_UWP_Edition {
             
             drawingSession.FillCircle(X, Y, Radius, Color);
         }
-
-        public void UpdatePeg(CanvasDrawingSession drawingSession) {
-
-        }
     }
 }
