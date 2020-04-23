@@ -178,7 +178,6 @@ namespace MasterMind_UWP_Edition
         {
             int[,] Board = new int[10, 4];
             Board = gamelogic.Board;
-            int counter = gamelogic.Counter;
 
             var temp = Peg.Children;
             var Array = temp.ToArray();
@@ -343,10 +342,20 @@ namespace MasterMind_UWP_Edition
             }
             int score;
             score = gamelogic.setPlayerPegsAndScore(colors);
-            MessageDialog temp = new MessageDialog(score + " Score is that");
+            Debug.WriteLine(gamelogic.Counter + " COunter");
             changeBox();
-            temp.ShowAsync();
             displayRight();
+
+            if (score == -1)
+            {
+                MessageDialog temp = new MessageDialog("You lost the game. WAAA WAAA LOSER");
+                temp.ShowAsync();
+            }
+            else if (score == 1)
+            {
+                MessageDialog temp = new MessageDialog("You won the game. CLAP CLAP");
+                temp.ShowAsync();
+            }
 
         }
 
@@ -355,7 +364,8 @@ namespace MasterMind_UWP_Edition
             int[] ScorePegs = gamelogic.ScorePegs;
             int Counter = gamelogic.Counter;
             var Array = Score.Children.ToArray();
-            {
+
+            if(Counter<=9){
                 Array[Counter].Visibility = Visibility.Visible;
                 int Black = 0;
                 int White = 0;
