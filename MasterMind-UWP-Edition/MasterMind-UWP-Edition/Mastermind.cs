@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace MasterMind_UWP_Edition {
     class GameLogic
     {
+        bool win = false;
         //Used to represnt the board
          public int[,] Board=new int[10, 4] {
                     {-1,-1,-1,-1 },
@@ -49,8 +50,9 @@ namespace MasterMind_UWP_Edition {
                 if (Counter >= 10)
                     return -1;
             }
+            if (win == true)
+                return 1;
 
-            bool win = false;
             { // Get the score of the plaeyr, and set that to Score Pegs
                 int rightPlace = 0;
                 int rightColor = 0;
