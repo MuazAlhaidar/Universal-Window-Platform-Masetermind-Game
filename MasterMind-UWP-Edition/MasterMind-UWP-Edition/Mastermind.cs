@@ -20,7 +20,7 @@ namespace MasterMind_UWP_Edition {
 
         public List<List<Peg>> Pegs;
         public List<List<Peg>> HintPegs;
-        public List<Peg> PegCode;
+        public List<Peg> PegSecretCode;
 
         public Mastermind() {
 
