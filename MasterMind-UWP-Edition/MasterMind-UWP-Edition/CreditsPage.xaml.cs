@@ -72,7 +72,6 @@ namespace MasterMind_UWP_Edition
                 args.DrawingSession.DrawText("Instructions", 250, 120, Colors.DeepPink, format);
             }
         }
-
         private static void DrawCredits(CanvasAnimatedDrawEventArgs args)
         {
 
