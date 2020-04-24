@@ -1,129 +1,123 @@
-﻿using Microsoft.Graphics.Canvas;
+﻿using Microsoft.Graphics.Canvas.Text;
+using Microsoft.Graphics.Canvas.UI.Xaml;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Reflection.Context;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
 
 namespace MasterMind_UWP_Edition
 {
 
-    public class Mastermind
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class CreditsPage : Page
     {
 
-        public CanvasDrawingSession session;
-
-        public int CurrentRow { get; set; }
-
-        public List<Color> PegColors = new List<Color> { Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.Purple, Colors.Cyan };
-        public List<Color> HintColors = new List<Color> { Colors.Green, Colors.Yellow, Colors.SlateGray };
-
-        public List<List<Peg>> Pegs;
-        public List<List<Peg>> HintPegs;
-        public List<Peg> PegSecretCode;
-
-        public Mastermind()
+        public CreditsPage()
         {
 
-            CurrentRow = 0;
+            this.InitializeComponent();
+        }
 
-            Pegs = new List<List<Peg>>();
+        private void Canvas_Draw(Microsoft.Graphics.Canvas.UI.Xaml.ICanvasAnimatedControl sender, Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedDrawEventArgs args)
+        {
 
-            int XCoordinate;
-            int YCoordinate = 50;
-            int newRadius = 20;
+            args.DrawingSession.DrawRectangle(10, 10, 500, 700, Colors.DeepSkyBlue);
 
-            for (int rowNumber = 0; rowNumber < 10; rowNumber++)
+            DrawCreditsTitle(args);
+            DrawCredits(args);
+            DrawReturnButton(args);
+        }
+
+        private void Canvas_Update(Microsoft.Graphics.Canvas.UI.Xaml.ICanvasAnimatedControl sender, Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedUpdateEventArgs args)
+        {
+
+
+        }
+
+        private void Canvas_Create_Resources(Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedControl sender, Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs args)
+        {
+
+
+        }
+
+        private static void DrawCreditsTitle(CanvasAnimatedDrawEventArgs args)
+        {
+
+            using (CanvasTextFormat format = new CanvasTextFormat
             {
 
-                var row = new List<Peg>();
+                HorizontalAlignment = CanvasHorizontalAlignment.Center,
+                VerticalAlignment = CanvasVerticalAlignment.Center,
 
-                XCoordinate = 50;
+                WordWrapping = CanvasWordWrapping.NoWrap,
 
-                for (int column = 0; column < 4; column++)
-                {
+                FontSize = 50.0f
+            })
+            {
 
-                    var peg = new Peg()
-                    {
-
-                        X = XCoordinate,
-                        Y = YCoordinate,
-                        Radius = newRadius,
-                        Color = Colors.SlateGray
-                    };
-
-                    row.Add(peg);
-
-                    XCoordinate += 60;
-                }
-
-                YCoordinate += 50;
-                Pegs.Add(row);
+                args.DrawingSession.DrawText("Instructions", 250, 120, Colors.DeepPink, format);
             }
         }
 
-        public Color NextColor(Color currentColor)
+        private static void DrawCredits(CanvasAnimatedDrawEventArgs args)
         {
 
-            if (currentColor == Colors.SlateGray)
+            using (CanvasTextFormat format = new CanvasTextFormat
             {
 
-                return PegColors[0];
-            }
-            else if (currentColor == Colors.Red)
+                HorizontalAlignment = CanvasHorizontalAlignment.Justified,
+                VerticalAlignment = CanvasVerticalAlignment.Center,
+
+                WordWrapping = CanvasWordWrapping.WholeWord,
+
+                FontSize = 15.0f
+            })
             {
 
-                return PegColors[1];
-            }
-            else if (currentColor == Colors.Blue)
-            {
-
-                return PegColors[2];
-            }
-            else if (currentColor == Colors.Green)
-            {
-
-                return PegColors[3];
-            }
-            else if (currentColor == Colors.Yellow)
-            {
-
-                return PegColors[4];
-            }
-            else if (currentColor == Colors.Purple)
-            {
-
-                return PegColors[5];
-            }
-            else if (currentColor == Colors.Cyan)
-            {
-
-                return PegColors[0];
-            }
-
-            return default;
-        }
-
-        public void DrawMastermind(CanvasDrawingSession drawingSession)
-        {
-
-            for (int rowIndex = 0; rowIndex < Pegs.Count; rowIndex++)
-            {
-
-                for (int columnIndex = 0; columnIndex < Pegs[rowIndex].Count; columnIndex++)
-                {
-
-                    Pegs[rowIndex][columnIndex].Draw(drawingSession);
-                }
+                args.DrawingSession.DrawText("Music:   Sath Button/ Gaming Sound Fx", 80, 200, Colors.DeepSkyBlue, format);
+                args.DrawingSession.DrawText("Assets:   Google Images", 80, 250, Colors.DeepSkyBlue, format);
+                args.DrawingSession.DrawText("Class:  CIS 297", 80, 315, Colors.DeepSkyBlue, format);
+                args.DrawingSession.DrawText("Team 12.   Muaz,Zak,John", 80, 380, Colors.DeepSkyBlue, format);
             }
         }
 
-        public void CheckIfCorrect()
+        private static void DrawReturnButton(CanvasAnimatedDrawEventArgs args)
         {
 
+            using (CanvasTextFormat format = new CanvasTextFormat
+            {
 
+                HorizontalAlignment = CanvasHorizontalAlignment.Center,
+                VerticalAlignment = CanvasVerticalAlignment.Center,
+
+                WordWrapping = CanvasWordWrapping.NoWrap,
+
+                FontSize = 20.0f
+            })
+            {
+
+                args.DrawingSession.DrawText("Return", 400, 660, Colors.DeepSkyBlue, format);
+            }
+        }
+
+        private void ReturnButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
