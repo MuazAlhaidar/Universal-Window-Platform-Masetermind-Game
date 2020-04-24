@@ -69,9 +69,10 @@ namespace MasterMind_UWP_Edition
             })
             {
 
-                args.DrawingSession.DrawText("Instructions", 250, 120, Colors.DeepPink, format);
+                args.DrawingSession.DrawText("Credits", 250, 120, Colors.DeepPink, format);
             }
         }
+
         private static void DrawCredits(CanvasAnimatedDrawEventArgs args)
         {
 
@@ -90,7 +91,7 @@ namespace MasterMind_UWP_Edition
                 args.DrawingSession.DrawText("Music:   Sath Button/ Gaming Sound Fx", 80, 200, Colors.DeepSkyBlue, format);
                 args.DrawingSession.DrawText("Assets:   Google Images", 80, 250, Colors.DeepSkyBlue, format);
                 args.DrawingSession.DrawText("Class:  CIS 297", 80, 315, Colors.DeepSkyBlue, format);
-                args.DrawingSession.DrawText("Team 12.   Muaz,Zak,John", 80, 380, Colors.DeepSkyBlue, format);
+                args.DrawingSession.DrawText("Team 12.   Muaz,  Zak,  John", 80, 380, Colors.DeepSkyBlue, format);
             }
         }
 
