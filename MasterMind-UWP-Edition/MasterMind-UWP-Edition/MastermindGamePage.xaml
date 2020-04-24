@@ -12,5 +12,6 @@
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" CreateResources="Canvas_Create_Resources"></canvas:CanvasAnimatedControl>
         <Button x:Name="CheckButton" Content="" Margin="300,575,0,0" Height="55" Width="200" VerticalAlignment="Top" Opacity=".3" Click="CheckButton_Click"/>
         <Button x:Name="ReturnButton" Content="" Margin="300,635,0,0" Height="55" Width="200" VerticalAlignment="Top" Opacity=".3" Click="ReturnButton_Click"/>
+        <Rectangle x:Name="SecretCodeCoverRectangle" HorizontalAlignment="Left" Height="88" Margin="20,575,0,0" Stroke="Black" VerticalAlignment="Top" Width="240" Fill="#FF3C3C3C" Opacity="1"/>
     </Grid>
 </Page>

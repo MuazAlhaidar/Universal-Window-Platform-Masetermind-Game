@@ -131,22 +131,16 @@ namespace MasterMind_UWP_Edition
         private void StartButton_Click(object sender, RoutedEventArgs e) {
 
             this.Frame.Navigate(typeof(MastermindGamePage));
-
-            Debug.WriteLine("(Start) Click Event");
         }
 
         private  void InstructionsButton_Click(object sender, RoutedEventArgs e) {
 
             this.Frame.Navigate(typeof(InstructionsPage));
-
-            Debug.WriteLine("(Instructions) Click Event");
         }
 
         private void CreditsButton_Click(object sender, RoutedEventArgs e) {
 
             this.Frame.Navigate(typeof(CreditsPage));
-
-            Debug.WriteLine("(Credits) Click Event");
         }
     }
 }
