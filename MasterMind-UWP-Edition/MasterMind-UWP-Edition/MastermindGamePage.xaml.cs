@@ -107,6 +107,15 @@ namespace MasterMind_UWP_Edition {
                     SecretCodeCoverRectangle.Opacity = 0.0;
                 }
             }
+
+            if (!mastermind.PlayerWon && mastermind.CurrentRow > 9) {
+
+                mastermind.PlayerLoses();
+            }
+            else if (mastermind.PlayerWon) {
+
+                mastermind.PlayerWins();
+            }
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e) {

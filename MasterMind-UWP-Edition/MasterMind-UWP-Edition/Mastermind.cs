@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.SmartCards;
 using Windows.UI;
+using Windows.UI.Popups;
 
 namespace MasterMind_UWP_Edition {
 
@@ -184,7 +185,7 @@ namespace MasterMind_UWP_Edition {
         public bool IsCorrect() {
 
             /*
-             Sources: majority of the algorithm was made by my teammate Zaki but i improved upn it using this article
+             Sources: majority of the algorithm was made by my teammate Zaki but i improved upon it using this page
              https://www.c-sharpcorner.com/article/mastermind-game-in-C-Sharp/
              what i got out of it was the use of the two arrays to keep track of RightPlace and RightColor placing
              int[] places = new int[] { -1, -1, -1, -1 };
@@ -264,14 +265,30 @@ namespace MasterMind_UWP_Edition {
             return false;
         }
 
-        public void PlayerWins() {
+        public async void PlayerWins() {
 
+            MessageDialog dialog = new MessageDialog("Gratz, you may press Return and Start again");
+            dialog.Commands.Add(new UICommand("Ok", null));
+            dialog.DefaultCommandIndex = 0;
+            dialog.CancelCommandIndex = 1;
+            var cmd = await dialog.ShowAsync();
 
+            //if (cmd.Label == "Ok") {
+                // do something
+            //}
         }
 
-        public void PlayerLoses() {
+        public async void PlayerLoses() {
 
+            MessageDialog dialog = new MessageDialog("You Lost :(, you may press Return and Start again");
+            dialog.Commands.Add(new UICommand("Ok", null));
+            dialog.DefaultCommandIndex = 0;
+            dialog.CancelCommandIndex = 1;
+            var cmd = await dialog.ShowAsync();
 
+            //if (cmd.Label == "Ok") {
+            // do something
+            //}
         }
     }
 }
