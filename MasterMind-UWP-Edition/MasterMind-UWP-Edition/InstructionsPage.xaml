@@ -10,5 +10,6 @@
 
     <Grid>
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" CreateResources="Canvas_Create_Resources"></canvas:CanvasAnimatedControl>
+        <Button x:Name="ReturnButton" Content="" Margin="300,635,0,0" Width="200" Height="55" VerticalAlignment="Top" Opacity="0.3" Click="ReturnButton_Click"/>
     </Grid>
 </Page>

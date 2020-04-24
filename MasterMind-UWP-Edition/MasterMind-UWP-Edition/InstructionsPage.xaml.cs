@@ -36,6 +36,7 @@ namespace MasterMind_UWP_Edition {
 
             DrawInstructionsTitle(args);
             DrawInstructions(args);
+            DrawReturnButton(args);
         }
 
         private void Canvas_Update(Microsoft.Graphics.Canvas.UI.Xaml.ICanvasAnimatedControl sender, Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedUpdateEventArgs args) {
@@ -86,6 +87,27 @@ namespace MasterMind_UWP_Edition {
                 args.DrawingSession.DrawText("C.   No hint peg indicates a wrong color that does not appear\nin the secret code", 90, 590, Colors.DeepSkyBlue, format);
                 args.DrawingSession.DrawText("6.   Steps 3-5 are repeated until the player either has no \nattempts left (10 attempts) or cracks the secret code", 80, 640, Colors.DeepSkyBlue, format);
             }
+        }
+
+        private static void DrawReturnButton(CanvasAnimatedDrawEventArgs args) {
+
+            using (CanvasTextFormat format = new CanvasTextFormat {
+
+                HorizontalAlignment = CanvasHorizontalAlignment.Center,
+                VerticalAlignment = CanvasVerticalAlignment.Center,
+
+                WordWrapping = CanvasWordWrapping.NoWrap,
+
+                FontSize = 20.0f
+            }) {
+
+                args.DrawingSession.DrawText("Return", 400, 660, Colors.DeepSkyBlue, format);
+            }
+        }
+
+        private void ReturnButton_Click(object sender, RoutedEventArgs e) {
+
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
