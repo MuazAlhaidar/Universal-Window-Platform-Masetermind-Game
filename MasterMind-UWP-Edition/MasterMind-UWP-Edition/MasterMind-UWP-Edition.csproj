@@ -141,6 +141,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\confused1.png" />
+    <Content Include="Assets\confused2.png" />
+    <Content Include="Assets\confused3.png" />
+    <Content Include="Assets\confused4.png" />
+    <Content Include="Assets\I can%27t believe you done this.mp3" />
+    <Content Include="Assets\Price is Right Losing Horn.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

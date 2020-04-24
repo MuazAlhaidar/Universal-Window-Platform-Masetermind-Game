@@ -8,6 +8,8 @@ using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Media.Playback;
+using Windows.Media.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -20,9 +22,13 @@ namespace MasterMind_UWP_Edition {
 
         Mastermind mastermind;
 
+        MediaPlayer songPlayer;
+
         public MastermindGamePage() {
 
             this.InitializeComponent();
+
+            songPlayer = new MediaPlayer();
 
             mastermind = new Mastermind();
 
@@ -111,11 +117,37 @@ namespace MasterMind_UWP_Edition {
             if (!mastermind.PlayerWon && mastermind.CurrentRow > 9) {
 
                 mastermind.PlayerLoses();
+
+                PlayLosingMusic();
             }
             else if (mastermind.PlayerWon) {
 
                 mastermind.PlayerWins();
+
+                PlayWinningMusic();
             }
+        }
+
+        private async void PlayLosingMusic() {
+
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("Price is Right Losing Horn.mp3");
+
+            songPlayer.AutoPlay = false;
+            songPlayer.Source = MediaSource.CreateFromStorageFile(file);
+
+            songPlayer.Play();
+        }
+
+        private async void PlayWinningMusic() {
+
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("I can't believe you done this.mp3");
+
+            songPlayer.AutoPlay = false;
+            songPlayer.Source = MediaSource.CreateFromStorageFile(file);
+
+            songPlayer.Play();
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e) {
