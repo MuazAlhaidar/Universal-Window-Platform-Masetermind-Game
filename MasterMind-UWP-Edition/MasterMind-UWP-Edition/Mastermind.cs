@@ -1,11 +1,6 @@
 ﻿using Microsoft.Graphics.Canvas;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Context;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Devices.SmartCards;
 using Windows.UI;
 using Windows.UI.Popups;
 
@@ -28,6 +23,8 @@ namespace MasterMind_UWP_Edition {
         public int RightColor { get; set; }
 
         public bool PlayerWon { get; set; }
+
+        //---------------------------- Constructor -------------------------------
 
         public Mastermind() {
 
@@ -131,6 +128,27 @@ namespace MasterMind_UWP_Edition {
             }
         }
 
+        //---------------------------- Draw Elements -----------------------------
+
+        public void DrawMastermind(CanvasDrawingSession drawingSession) {
+
+            for (int rowIndex = 0; rowIndex < Pegs.Count; rowIndex++) {
+
+                for (int columnIndex = 0; columnIndex < Pegs[rowIndex].Count; columnIndex++) {
+
+                    Pegs[rowIndex][columnIndex].Draw(drawingSession);
+                    HintPegs[rowIndex][columnIndex].Draw(drawingSession);
+                }
+            }
+
+            for (int columnIndex = 0; columnIndex < PegSecretCode.Count; columnIndex++) {
+
+                PegSecretCode[columnIndex].Draw(drawingSession);
+            }
+        }
+
+        //---------------------------- Miscellaneous ------------------------------
+
         public Color NextColor(Color currentColor) {
 
             if (currentColor == Colors.SlateGray) {
@@ -163,23 +181,6 @@ namespace MasterMind_UWP_Edition {
             }
 
             return default;
-        }
-
-        public void DrawMastermind(CanvasDrawingSession drawingSession) {
-
-            for (int rowIndex = 0; rowIndex < Pegs.Count; rowIndex++) {
-
-                for (int columnIndex = 0; columnIndex < Pegs[rowIndex].Count; columnIndex++) {
-
-                    Pegs[rowIndex][columnIndex].Draw(drawingSession);
-                    HintPegs[rowIndex][columnIndex].Draw(drawingSession);
-                }
-            }
-
-            for (int columnIndex = 0; columnIndex < PegSecretCode.Count; columnIndex++) {
-
-                PegSecretCode[columnIndex].Draw(drawingSession);
-            }
         }
 
         public bool IsCorrect() {
@@ -230,7 +231,7 @@ namespace MasterMind_UWP_Edition {
 
                 for (int j = 0; j < 4; j++) {
 
-                    if ((i!=j) && (places[i] != 1) && (places2[j] != 1)) {
+                    if ((i != j) && (places[i] != 1) && (places2[j] != 1)) {
 
                         if (PegSecretCode[i].Color == Pegs[CurrentRow - 1][j].Color) {
 
@@ -272,10 +273,6 @@ namespace MasterMind_UWP_Edition {
             dialog.DefaultCommandIndex = 0;
             dialog.CancelCommandIndex = 1;
             var cmd = await dialog.ShowAsync();
-
-            //if (cmd.Label == "Ok") {
-                // do something
-            //}
         }
 
         public async void PlayerLoses() {
@@ -285,10 +282,6 @@ namespace MasterMind_UWP_Edition {
             dialog.DefaultCommandIndex = 0;
             dialog.CancelCommandIndex = 1;
             var cmd = await dialog.ShowAsync();
-
-            //if (cmd.Label == "Ok") {
-            // do something
-            //}
         }
     }
 }
