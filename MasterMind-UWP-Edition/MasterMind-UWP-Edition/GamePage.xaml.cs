@@ -361,12 +361,12 @@ namespace MasterMind_UWP_Edition
 
         private void displayRight() // Display how many pegs they got right or not
         {
+
             int[] ScorePegs = gamelogic.ScorePegs;
             int Counter = gamelogic.Counter;
             var Array = Score.Children.ToArray();
-
-            if(Counter<=9){
-                Array[Counter].Visibility = Visibility.Visible;
+            if(Counter<=10){
+                Array[Counter-1].Visibility = Visibility.Visible;
                 int Black = 0;
                 int White = 0;
                 for (int j = 0; j < 4; j++)
@@ -379,7 +379,7 @@ namespace MasterMind_UWP_Edition
 
                 string temp = "Black " + Black + "\t White" + White;
 
-                Array[Counter].SetValue(TextBlock.TextProperty, temp);
+                Array[Counter-1].SetValue(TextBlock.TextProperty, temp);
 
             }
 

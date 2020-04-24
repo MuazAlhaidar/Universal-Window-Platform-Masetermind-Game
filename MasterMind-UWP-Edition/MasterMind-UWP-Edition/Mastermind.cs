@@ -46,9 +46,10 @@ namespace MasterMind_UWP_Edition {
         //1 means player won.
         public int setPlayerPegsAndScore(int[] Pegs)
         {
-            { //Check to see if player should stop playing
-                if (Counter >= 10)
-                    return -1;
+            //Check to see if player should stop playing
+            if (Counter >= 10)
+            {
+                return -1;
             }
             if (win == true)
                 return 1;
@@ -58,32 +59,32 @@ namespace MasterMind_UWP_Edition {
                 int rightColor = 0;
 
                 //Getting number of matching placement
-                for(int i=0; i<4; i++) 
+                for (int i = 0; i < 4; i++)
                 {
                     if (CPUPegs[i] == Pegs[i])
                         rightPlace++;
-                    
+
                 }
                 if (rightPlace == 4)
                 {
                     win = true;
-                    for(int i=0; i<4; i++)
+                    for (int i = 0; i < 4; i++)
                     {
                         Board[Counter, i] = Pegs[i]; // THe value to show that this is the winning result
-                        ScorePegs[i] = 2; 
+                        ScorePegs[i] = 2;
                     }
                     return 1;
                 }
 
                 //Getting number of matching colors
-                for(int i=0; i<4; i++) 
+                for (int i = 0; i < 4; i++)
                 {
                     for (int j = 0; j < 4; j++)
                     {
                         if (CPUPegs[i] == Pegs[j])
                             rightColor++;
                     }
-                    
+
                 }
 
                 //Right colors have to be mutally exlusive to rightPlace.
@@ -108,12 +109,12 @@ namespace MasterMind_UWP_Edition {
             }
 
             {   //Now, set the player pegs down, and move the counter if they fail. Otherwise if they win, return they won. 
-                    for (int i = 0; i < 4; i++)
-                    {
-                        Board[Counter, i] = Pegs[i];
-                    }
-                    Counter++;
-                    return 0;
+                for (int i = 0; i < 4; i++)
+                {
+                    Board[Counter, i] = Pegs[i];
+                }
+                Counter++;
+                return 0;
             }
         }
 
@@ -121,7 +122,7 @@ namespace MasterMind_UWP_Edition {
         public void switchPegs(int boardPos, int playerPos, int[] PlayerPegs)
         {
             int temp = Board[Counter, boardPos];
-            Board[Counter, boardPos]=PlayerPegs[playerPos];
+            Board[Counter, boardPos] = PlayerPegs[playerPos];
             PlayerPegs[playerPos] = temp;
 
         }
