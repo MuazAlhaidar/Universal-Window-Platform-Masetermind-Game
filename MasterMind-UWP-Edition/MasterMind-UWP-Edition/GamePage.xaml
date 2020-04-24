@@ -9,7 +9,7 @@
     mc:Ignorable="d" Background="#FF441F1F">
 
     <Grid FocusVisualPrimaryBrush="White" Margin="10,10,10,10">
-        <Button Content="Press X to not Die" Margin="1260,801,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />
+        <Button Content="Sumbit" Margin="1260,801,0,0" VerticalAlignment="Top" Click="Sumbit_Results" />
         <ComboBox x:Name="Select3"  Margin="210,741,0,0" Width="105" Height="32" SelectionChanged="ComboBox_SelectionChanged_2">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
@@ -52,7 +52,7 @@
             <TextBlock  HorizontalAlignment="Left" Margin="155,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="287,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="412,111,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
-            
+
             <TextBlock  HorizontalAlignment="Left" Margin="32,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="155,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
             <TextBlock  HorizontalAlignment="Left" Margin="287,153,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFFB0000" Foreground="Red"/>
@@ -108,5 +108,6 @@
             <TextBlock HorizontalAlignment="Center" Margin="0,445,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,496,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
         </Grid>
+        <Button Content="Return" Margin="1260,736,0,0" VerticalAlignment="Top" Click="Return" />
     </Grid>
 </Page>

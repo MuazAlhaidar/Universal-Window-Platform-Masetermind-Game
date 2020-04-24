@@ -52,7 +52,9 @@ namespace MasterMind_UWP_Edition {
                 return -1;
             }
             if (win == true)
+            {
                 return 1;
+            }
 
             { // Get the score of the plaeyr, and set that to Score Pegs
                 int rightPlace = 0;
@@ -73,6 +75,7 @@ namespace MasterMind_UWP_Edition {
                         Board[Counter, i] = Pegs[i]; // THe value to show that this is the winning result
                         ScorePegs[i] = 2;
                     }
+                    Counter++;
                     return 1;
                 }
 

@@ -141,6 +141,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Lose.mp3" />
+    <Content Include="Assets\Maiq.png" />
+    <Content Include="Assets\Win.wav" />
+    <Content Include="Assets\Spa.png" />
+    <Content Include="Assets\The Brains.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

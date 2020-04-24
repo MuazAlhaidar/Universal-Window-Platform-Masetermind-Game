@@ -1,4 +1,6 @@
 ﻿using Microsoft.Graphics.Canvas.Text;
+using Windows.Media.Playback;
+using Windows.Media.Core;
 using Microsoft.Graphics.Canvas.UI.Xaml;
 using System;
 using System.Collections.Generic;
@@ -27,11 +29,13 @@ namespace MasterMind_UWP_Edition
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        MediaPlayer Player;
         //---------------------------- Constructor -------------------------------
         static GameLogic gamelogic;
         public MainPage()
         {
             this.InitializeComponent();
+            Player = new MediaPlayer();
             gamelogic = new GameLogic();
             changeBox();
             for(int i=0; i<10; i++)
@@ -204,7 +208,7 @@ namespace MasterMind_UWP_Edition
 
         }
 
-        private void Sumbit_Results(object sender, RoutedEventArgs e)
+        private async void Sumbit_Results(object sender, RoutedEventArgs e)
         {
 
             int[] colors = new int[4];
@@ -350,11 +354,27 @@ namespace MasterMind_UWP_Edition
             {
                 MessageDialog temp = new MessageDialog("You lost the game. WAAA WAAA LOSER");
                 temp.ShowAsync();
+                Windows.Storage.StorageFolder  folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+                Windows.Storage.StorageFile file = await folder.GetFileAsync("Lose.mp3");
+                Player.AutoPlay = true;
+                Player.Source = MediaSource.CreateFromStorageFile(file);
+
+                Player.Play();
+
+
+
+
             }
             else if (score == 1)
             {
                 MessageDialog temp = new MessageDialog("You won the game. CLAP CLAP");
                 temp.ShowAsync();
+                Windows.Storage.StorageFolder  folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+                Windows.Storage.StorageFile file = await folder.GetFileAsync("Win.wav");
+                Player.AutoPlay = true;
+                Player.Source = MediaSource.CreateFromStorageFile(file);
+
+                Player.Play();
             }
 
         }
@@ -403,6 +423,13 @@ namespace MasterMind_UWP_Edition
 
         private void ComboBox_SelectionChanged_3(object sender, SelectionChangedEventArgs e)
         {
+
+        }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+             this.Frame.Navigate(typeof(NewMainMenuPage));
+
 
         }
     }

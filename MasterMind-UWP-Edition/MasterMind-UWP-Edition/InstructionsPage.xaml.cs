@@ -87,5 +87,11 @@ namespace MasterMind_UWP_Edition {
                 args.DrawingSession.DrawText("6.   Steps 3-5 are repeated until the player either has no \nattempts left (10 attempts) or cracks the secret code", 80, 640, Colors.DeepSkyBlue, format);
             }
         }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+
+             this.Frame.Navigate(typeof(NewMainMenuPage));
+        }
     }
 }

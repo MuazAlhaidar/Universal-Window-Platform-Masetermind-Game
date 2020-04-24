@@ -42,5 +42,11 @@ namespace MasterMind_UWP_Edition {
 
 
         }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+
+             this.Frame.Navigate(typeof(NewMainMenuPage));
+        }
     }
 }
