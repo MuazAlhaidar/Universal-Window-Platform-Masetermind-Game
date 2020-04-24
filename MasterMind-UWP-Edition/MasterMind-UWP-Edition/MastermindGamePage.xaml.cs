@@ -102,9 +102,10 @@ namespace MasterMind_UWP_Edition {
 
                 mastermind.CurrentRow++;
 
-                mastermind.IsCorrect();
+                if (mastermind.IsCorrect()) {
 
-                SecretCodeCoverRectangle.Opacity = 0.0;
+                    SecretCodeCoverRectangle.Opacity = 0.0;
+                }
             }
         }
 

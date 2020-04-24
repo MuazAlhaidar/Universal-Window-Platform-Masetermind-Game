@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection.Context;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Devices.SmartCards;
 using Windows.UI;
 
 namespace MasterMind_UWP_Edition {
@@ -109,7 +110,7 @@ namespace MasterMind_UWP_Edition {
                     }
 
                     peg.Radius = newRadius;
-                    peg.Color = Colors.SlateGray;
+                    peg.Color = Colors.Black;
 
                     if (newLine > 2) {
 
@@ -181,63 +182,81 @@ namespace MasterMind_UWP_Edition {
             }
         }
 
-        public void IsCorrect() {
+        public bool IsCorrect() {
 
-            //// Get the score of the player, and set that to Score Pegs
-            //int rightPlace = 0;
-            //int rightColor = 0;
+            /*
+             Sources: majority of the algorithm was made by my teammate Zaki but i improved upn it using this article
+             https://www.c-sharpcorner.com/article/mastermind-game-in-C-Sharp/
+             what i got out of it was the use of the two arrays to keep track of RightPlace and RightColor placing
+             int[] places = new int[] { -1, -1, -1, -1 };
+             int[] places2 = new int[] { -1, -1, -1, -1 };
+            */
 
-            ////Getting number of matching placement
-            //for (int i = 0; i < 4; i++) {
+            // Get the score of the player, and set that to Score Pegs
+            RightPlace = 0;
+            RightColor = 0;
 
-            //    if (CPUPegs[i] == Pegs[i])
-            //        rightPlace++;
+            int[] places = new int[] { -1, -1, -1, -1 };
+            int[] places2 = new int[] { -1, -1, -1, -1 };
 
-            //}
-            //if (rightPlace == 4) {
+            //Getting number of matching placement
+            for (int i = 0; i < 4; i++) {
 
-            //    win = true;
+                if (PegSecretCode[i].Color == Pegs[CurrentRow - 1][i].Color) {
 
-            //    for (int i = 0; i < 4; i++) {
+                    RightPlace++;
 
-            //        Board[Counter, i] = Pegs[i]; // THe value to show that this is the winning result
-            //        ScorePegs[i] = 2;
-            //    }
+                    places[i] = 1;
+                    places2[i] = 1;
+                }
+            }
 
-            //    Counter++;
-            //    return 1;
-            //}
+            if (RightPlace == 4) {
 
-            ////Getting number of matching colors
-            //for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < 4; i++) {
 
-            //    for (int j = 0; j < 4; j++) {
+                    HintPegs[CurrentRow - 1][i].Color = HintColors[0];
+                }
 
-            //        if (CPUPegs[i] == Pegs[j])
-            //            rightColor++;
-            //    }
-            //}
+                return true;
+            }
 
-            ////Right colors have to be mutally exlusive to rightPlace.
-            //rightColor -= rightPlace;
+            //Getting number of matching colors
+            for (int i = 0; i < 4; i++) {
 
-            //for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 4; j++) {
 
-            //    if (rightColor != 0) {
+                    if ((i!=j) && (places[i] != 1) && (places2[j] != 1)) {
 
-            //        ScorePegs[i] = 1;
-            //        rightColor--;
-            //    }
-            //    else if (rightPlace != 0) {
+                        if (PegSecretCode[i].Color == Pegs[CurrentRow - 1][j].Color) {
 
-            //        ScorePegs[i] = 2;
-            //        rightPlace--;
-            //    }
-            //    else {
+                            RightColor++;
+                            places[i] = 1;
+                            places2[j] = 1;
+                        }
+                    }
+                }
+            }
 
-            //        ScorePegs[i] = 0;
-            //    }
-            //}
+            for (int i = 0; i < 4; i++) {
+
+                if (RightPlace != 0) {
+
+                    HintPegs[CurrentRow - 1][i].Color = HintColors[0];
+                    RightPlace--;
+                }
+                else if (RightColor != 0) {
+
+                    HintPegs[CurrentRow - 1][i].Color = HintColors[1];
+                    RightColor--;
+                }
+                else {
+
+                    HintPegs[CurrentRow - 1][i].Color = HintColors[2];
+                }
+            }
+
+            return false;
         }
     }
 }
