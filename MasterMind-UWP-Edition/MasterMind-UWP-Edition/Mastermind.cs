@@ -181,7 +181,7 @@ namespace MasterMind_UWP_Edition {
             }
         }
 
-        public void CheckIfCorrect() {
+        public void IsCorrect() {
 
             //// Get the score of the player, and set that to Score Pegs
             //int rightPlace = 0;
