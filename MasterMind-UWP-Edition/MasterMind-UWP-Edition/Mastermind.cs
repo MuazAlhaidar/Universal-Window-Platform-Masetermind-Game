@@ -26,9 +26,13 @@ namespace MasterMind_UWP_Edition {
         public int RightPlace { get; set; }
         public int RightColor { get; set; }
 
+        public bool PlayerWon { get; set; }
+
         public Mastermind() {
 
             CurrentRow = 0;
+
+            PlayerWon = false;
 
             Pegs = new List<List<Peg>>();
             HintPegs = new List<List<Peg>>();
@@ -111,11 +115,6 @@ namespace MasterMind_UWP_Edition {
 
                     peg.Radius = newRadius;
                     peg.Color = Colors.Black;
-
-                    if (newLine > 2) {
-
-                        newLine = 0;
-                    }
 
                     row.Add(peg);
 
@@ -220,6 +219,8 @@ namespace MasterMind_UWP_Edition {
 
                 CurrentRow = 10;
 
+                PlayerWon = true;
+
                 return true;
             }
 
@@ -258,7 +259,19 @@ namespace MasterMind_UWP_Edition {
                 }
             }
 
+            PlayerWon = false;
+
             return false;
+        }
+
+        public void PlayerWins() {
+
+
+        }
+
+        public void PlayerLoses() {
+
+
         }
     }
 }
