@@ -218,6 +218,8 @@ namespace MasterMind_UWP_Edition {
                     HintPegs[CurrentRow - 1][i].Color = HintColors[0];
                 }
 
+                CurrentRow = 10;
+
                 return true;
             }
 
